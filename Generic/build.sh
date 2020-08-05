@@ -40,8 +40,8 @@ sudo ./ErfanGSIs/url2GSI.sh $ROM_LINK Generic:$ROM_GENERIC
     echo "::set-env name=WET_DOWNLOAD_AB::$(./transfer wet "$ROM_GENERIC-AB-$sourcever2-$date2-ErfanGSI-YuMiGSI.zip" | grep -o -P '(?<=Download Link: )\S+')"
     
     # SourceForge
-    chmod +x upload.sh
-    ./upload.sh
+    chmod +x /home/runner/work/GSI-Bot/GSI-Bot/Generic/upload.sh
+    ./home/runner/work/GSI-Bot/GSI-Bot/Generic/upload.sh
 
     SYNC_END=$(date +"%s")
     SYNC_DIFF=$((SYNC_END - SYNC_START))
