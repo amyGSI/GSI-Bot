@@ -3,17 +3,17 @@ name: GSI - Erfan
 on: [push]
 
 env:
-  ROM: Flyme
-  GENERIC_TYPE: 0
-  ROM_GENERIC: AncientOS
-  ROM_LINK: https://download.meizu.com/Firmware/Flyme/16xs/8.20.8.4/cn_daily/20200804003619/e02f211f/update.zip
-  DLAONLYSF: https://sourceforge.net/projects/yumi-project/gsi/Flyme/meizu16Xs/20200804/Flyme-Aonly-10-20200804-ErfanGSI-YuMiGSI.zip/download
-  DLABSF: https://sourceforge.net/projects/yumi-project/gsi/Flyme/meizu16Xs/20200804/Flyme-AB-10-20200804-ErfanGSI-YuMiGSI.zip/download
-  SFDIRA: cd /home/pfs/project/yumi-project/gsi/Flyme/meizu16Xs/20200804
-  SFDIRAB: cd /home/pfs/project/yumi-project/gsi/Flyme/meizu16Xs/20200804
+  ROM: Generic
+  GENERIC_TYPE: 1
+  ROM_GENERIC: PixysOS-v3.1.1
+  ROM_LINK: https://netactuate.dl.sourceforge.net/project/pixys-os//ten/ginkgo/PixysOS-v3.1.1-ginkgo-OFFICIAL-20200718-200121.zip
+  DLAONLYSF: https://sourceforge.net/projects/yumi-project/files/gsi/Generic/PixysOS/v3.1.1/ginkgo/20200804/PixysOS-v3.1.1-Aonly-10-20200804-ErfanGSI-YuMiGSI.zip/download
+  DLABSF: https://sourceforge.net/projects/yumi-project/files/gsi/Generic/PixysOS/v3.1.1/ginkgo/20200804/PixysOS-v3.1.1-AB-10-20200804-ErfanGSI-YuMiGSI.zip/download
+  SFDIRA: cd /home/pfs/project/yumi-project/gsi/Generic/PixysOS/v3.1.1/ginkgo/20200804
+  SFDIRAB: cd /home/pfs/project/yumi-project/gsi/Generic/PixysOS/v3.1.1/ginkgo/20200804
   MIR: gof
   TZ: America/Sao_Paulo
-  READ: Use <b>Disable HW Overlays ZIP</b> to avoid UI issues or related.
+  READ: This is generic type.
 jobs:
   build:
     runs-on: ubuntu-latest

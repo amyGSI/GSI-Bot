@@ -33,12 +33,11 @@ with pyrogram.Client('bot', os.getenv('API_ID'), os.getenv('API_HASH'), bot_toke
 
 <b>- Thanks to:</b> <a href="https://github.com/yukosky/ErfanGSIs/graphs/contributors">Contributors List</a>
 
-<b>• YuMi Projekt </b> - Channel: @yuprojekt
-<b>• YuMi Projekt </b> - Group: @yusupport
+<b>• Velandy Project </b> - Channel: @velandy
 
 <b>• READ:</b> {read}
 
-<b>• Ported using ErfanGSIs Tool -</b> <a href="https://github.com/yukosky/ErfanGSIs">Yuko's Based</a>""",
+<b>• Ported using ErfanGSIs Tool -</b> <a href="https://github.com/yukosky/ErfanGSIs">Velo's Based</a>""",
         chat_id=os.getenv('CHAT_ID'),
         parse_mode="html",
         disable_web_page_preview=True
