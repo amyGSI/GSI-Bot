@@ -96,5 +96,5 @@ jobs:
          
          run: |
               chmod +x uploadSelect.sh
-              ./uploadSelext.sh
+              ./uploadSelect.sh
               
