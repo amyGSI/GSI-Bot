@@ -58,6 +58,7 @@ jobs:
          
        - name: Upload to SF
          run: |
+              cd ErfanGSIs/output
               expect -c "
               spawn sftp pything@frs.sourceforge.net
               expect \"yes/no\"
