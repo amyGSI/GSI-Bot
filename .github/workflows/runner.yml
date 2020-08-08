@@ -5,12 +5,12 @@ on: [push]
 env:
   ROM: Generic
   GENERIC_TYPE: 1
-  ROM_GENERIC: POSP-croquette-v3.1.8
-  ROM_LINK: https://pilotfiber.dl.sourceforge.net/project/posp//daisy/croquette/potato_daisy-10-20200518-croquette.v3.1.8%2B13.Official.zip
-  DLAONLYSF: https://sourceforge.net/projects/yumi-project/files/gsi/Generic/POSP/croquette/daisy/20200805/POSP-croquette-v3.1.8-Aonly-10-20200805-ErfanGSI-YuMiGSI.zip/download
-  DLABSF: https://sourceforge.net/projects/yumi-project/files/gsi/Generic/POSP/croquette/daisy/20200805/POSP-croquette-v3.1.8-AB-10-20200805-ErfanGSI-YuMiGSI.zip/download
-  SFDIRA: cd /home/pfs/project/yumi-project/gsi/Generic/POSP/croquette/daisy/20200805
-  SFDIRAB: cd /home/pfs/project/yumi-project/gsi/Generic/POSP/croquette/daisy/20200805
+  ROM_GENERIC: LineageOS-17.1
+  ROM_LINK: https://ayera.dl.sourceforge.net/project/yumi-project//montana/los17/lineage-17.1-20200807-UNOFFICIAL-montana.zip
+  DLAONLYSF: https://sourceforge.net/projects/yumi-project/files/gsi/Generic/Generic/LineageOS/17.1/montana/20200807/LineageOS-17.1-Aonly-10-20200807-ErfanGSI-YuMiGSI.zip/download
+  DLABSF: https://sourceforge.net/projects/yumi-project/files/gsi/Generic/LineageOS/17.1/montana/20200807/LineageOS-17.1-AB-10-20200807-ErfanGSI-YuMiGSI.zip/download
+  SFDIRA: cd /home/pfs/project/yumi-project/gsi/Generic/LineageOS/17.1/montana/20200807
+  SFDIRAB: cd /home/pfs/project/yumi-project/gsi/Generic/LineageOS/17.1/montana/20200807
   MIR: gof
   TZ: America/Sao_Paulo
   READ: This is generic type.
@@ -55,6 +55,36 @@ jobs:
                
        - name: Copy and rename A-Only build info
          run: cp ErfanGSIs/output/*Aonly*.txt Aonly.txt
+         
+       - name: Upload to SF
+         run: |
+              expect -c "
+              spawn sftp pything@frs.sourceforge.net
+              expect \"yes/no\"
+              send \"yes\r\"
+              expect \"Password\"
+              send \"${{ secrets.PASSWORD }}\r\"
+              expect \"sftp> \"
+              send \"$SFDIRA\r\"
+              set timeout -1
+              send \"put *Aonly*.zip\r\"
+              expect \"Uploading\"
+              expect \"100%\"
+              expect \"sftp>\"
+              interact"
+              expect -c "
+              spawn sftp pything@frs.sourceforge.net
+              expect \"Password\"
+              send \"${{ secrets.PASSWORD }}\r\"
+              expect \"sftp> \"
+              send \"$SFDIRAB\r\"
+              set timeout -1
+              send \"put *AB*.zip\r\"
+              expect \"Uploading\"
+              expect \"100%\"
+              expect \"sftp>\"
+              send \"bye\r\"
+              interact"
 
        - name: Send build info to Telegram
          env:
@@ -62,7 +92,8 @@ jobs:
               TOKEN: ${{ secrets.TOKEN }}
               API_ID: ${{ secrets.API_ID }}
               API_HASH: ${{ secrets.API_HASH }}
-
+         
          run: |
               chmod +x uploadSelect.sh
               ./uploadSelext.sh
+              

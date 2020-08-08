@@ -39,10 +39,6 @@ sudo ./ErfanGSIs/url2GSI.sh $ROM_LINK Generic:$ROM_GENERIC
     echo "::set-env name=WET_DOWNLOAD_A::$(./transfer wet "$ROM_GENERIC-Aonly-$sourcever2-$date2-ErfanGSI-YuMiGSI.zip" | grep -o -P '(?<=Download Link: )\S+')"
     echo "::set-env name=WET_DOWNLOAD_AB::$(./transfer wet "$ROM_GENERIC-AB-$sourcever2-$date2-ErfanGSI-YuMiGSI.zip" | grep -o -P '(?<=Download Link: )\S+')"
     
-    # SourceForge
-    chmod +x /home/runner/work/GSI-Bot/GSI-Bot/Generic/upload.sh
-    ./home/runner/work/GSI-Bot/GSI-Bot/Generic/upload.sh
-
     SYNC_END=$(date +"%s")
     SYNC_DIFF=$((SYNC_END - SYNC_START))
     telegram -M "Generic ($ROM_GENERIC): Uploading completed successfully in $((SYNC_DIFF / 60)) minute(s) and $((SYNC_DIFF % 60)) seconds."
