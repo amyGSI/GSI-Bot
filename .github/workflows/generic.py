@@ -21,7 +21,7 @@ read = os.getenv('READ')
 
 with pyrogram.Client('bot', os.getenv('API_ID'), os.getenv('API_HASH'), bot_token=os.getenv('TOKEN')) as client:
     client.send_message(
-        text=f"""- <b>{rom} GSI For A-Only • A/B Devices ({rom_generic})</b>
+        text=f"""- <b>{rom_generic} GSI For A-Only • A/B Devices</b>
 
 <b>- Firmware Base:</b> <a href="{romlink}">HERE</a>
 
@@ -34,11 +34,11 @@ with pyrogram.Client('bot', os.getenv('API_ID'), os.getenv('API_HASH'), bot_toke
 
 <b>- Thanks to:</b> <a href="https://github.com/yukosky/ErfanGSIs/graphs/contributors">Contributors List</a>
 
-<b>• Velandy Project </b> - Channel: @velandy
+<b>• amyGSI </b> - Channel: @amyGSI
 
 <b>• READ:</b> {read}
 
-<b>• Ported using ErfanGSIs Tool -</b> <a href="https://github.com/yukosky/ErfanGSIs">Velo's Based</a>""",
+<b>• Ported using ErfanGSIs Tool -</b> <a href="https://github.com/amyGSI/ErfanGSIs">amyGSI Fork</a>""",
         chat_id=os.getenv('CHAT_ID'),
         parse_mode="html",
         disable_web_page_preview=True
