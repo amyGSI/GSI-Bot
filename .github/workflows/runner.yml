@@ -60,7 +60,7 @@ jobs:
          run: |
               cd ErfanGSIs/output
               expect -c "
-              spawn sftp pything@frs.sourceforge.net
+              spawn sftp dev-00p513@frs.sourceforge.net
               expect \"yes/no\"
               send \"yes\r\"
               expect \"Password\"
@@ -74,7 +74,7 @@ jobs:
               expect \"sftp>\"
               interact"
               expect -c "
-              spawn sftp pything@frs.sourceforge.net
+              spawn sftp dev-00p513@frs.sourceforge.net
               expect \"Password\"
               send \"${{ secrets.PASSWORD }}\r\"
               expect \"sftp> \"
