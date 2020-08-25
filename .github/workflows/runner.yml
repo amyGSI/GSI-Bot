@@ -7,10 +7,10 @@ env:
   GENERIC_TYPE: 1
   ROM_GENERIC: LineageOS-17.1
   ROM_LINK: https://ayera.dl.sourceforge.net/project/yumi-project//montana/los17/lineage-17.1-20200807-UNOFFICIAL-montana.zip
-  DLAONLYSF: https://sourceforge.net/projects/yumi-project/files/gsi/Generic/Generic/LineageOS/17.1/montana/20200807/LineageOS-17.1-Aonly-10-20200807-ErfanGSI-YuMiGSI.zip/download
-  DLABSF: https://sourceforge.net/projects/yumi-project/files/gsi/Generic/LineageOS/17.1/montana/20200807/LineageOS-17.1-AB-10-20200807-ErfanGSI-YuMiGSI.zip/download
-  SFDIRA: cd /home/pfs/project/yumi-project/gsi/Generic/LineageOS/17.1/montana/20200807
-  SFDIRAB: cd /home/pfs/project/yumi-project/gsi/Generic/LineageOS/17.1/montana/20200807
+  DLAONLYSF: https://sourceforge.net/projects/amygsi/files/gsi/Generic/Generic/LineageOS/17.1/montana/20200807/LineageOS-17.1-Aonly-10-20200807-ErfanGSI-YuMiGSI.zip/download
+  DLABSF: https://sourceforge.net/projects/amygsi/files/gsi/Generic/LineageOS/17.1/montana/20200807/LineageOS-17.1-AB-10-20200807-ErfanGSI-YuMiGSI.zip/download
+  SFDIRA: cd /home/pfs/project/amygsi/gsi/Generic/LineageOS/17.1/montana/20200807
+  SFDIRAB: cd /home/pfs/project/amygsi/gsi/Generic/LineageOS/17.1/montana/20200807
   MIR: gof
   TZ: America/Sao_Paulo
   READ: This is generic type.
