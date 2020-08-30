@@ -6,7 +6,7 @@ env:
   ROM: Generic
   GENERIC_TYPE: 1
   ROM_GENERIC: PixysOS
-  ROM_LINK: https://mor1.androidfilehost.com/dl/novXBHfBRZQ4hbDxICmpaA/1598450577/8889791610682922492/PixysOS-v3.1.2-channel-UNOFFICIAL-20200824-012114.zip
+  ROM_LINK: https://get.station307.com/7MER17pRsEc/Express-0.1-20200830-UNOFFICIAL-hero2lte.zip
   DLAONLYSF: https://sourceforge.net/projects/amygsi/files/gsi/Generic/PixysOS/PixysOS-v3.1.2-Aonly-10-20200807-ErfanGSI-YuMiGSI.zip/download
   DLABSF: https://sourceforge.net/projects/amygsi/files/gsi/Generic/PixysOS/PixysOS-v3.1.2-AB-10-20200807-ErfanGSI-YuMiGSI.zip/download
   SFDIRA: cd /home/pfs/project/amygsi/gsi/Generic/PixysOS
